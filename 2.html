@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.col{
+			color: red !important;
+		}
+		.one, .two, .three{
+			color: black;
+		}
+	</style>
+</head>
+<body>
+	<button data-target="one" onclick="fun(this)">ClickMe</button>
+	<button data-target="two" onclick="fun(this)">ClickMe</button>
+	<button data-target="three" onclick="fun(this)">ClickMe</button>
+	<p class="one">I am an one element</p>
+	<p class="one">I am an one element</p>
+	<p class="three">I am an one element</p>
+
+	<script>
+		function fun(s) {
+			var a  = s.dataset.target;
+			// console.log(a);
+			var b = document.getElementsByClassName(a);
+			// console.log(b);
+			
+			for(var i = 0; i<b.length; i++){
+				if(b[i].classList.contains(s.dataset.target)){
+					var cl = b[i].classList[0];
+					b[i].classList.toggle('col');
+				}
+				// var e = b[i];
+				// b[i].classList.remove(a);
+			}
+
+			// e.classList.toggle('col');
+
+
+
+		}
+	</script>
+</body>
+</html>

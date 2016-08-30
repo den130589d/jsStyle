@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.col{
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<button data-target="one" onclick="fun(this)">ClickMe</button>
+	<button data-target="two" onclick="fun(this)">ClickMe</button>
+	<button data-target="three" onclick="fun(this)">ClickMe</button>
+	<p id="one">I am an one element</p>
+	<p id="two">I am an one element</p>
+	<p id="three">I am an one element</p>
+
+	<script>
+		function fun(s) {
+			var a  = s.dataset.target;
+			document.getElementById(a).classList.toggle('col');
+		}
+	</script>
+</body>
+</html>

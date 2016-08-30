@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+	</style>
+</head>
+<body>
+	<img id ="a" src="icon.jpg" alt="pictures" onclick="fun()">
+	<div id="info">
+		<p id="path"><strong>src:</strong></p>
+		<p id="alt"><strong>all text:</strong></p>		
+	</div>
+
+	<script>
+		function fun() {
+			
+			var getAlt = a.getAttribute('alt');
+			var getSrc = a.getAttribute('src');
+			var c = document.getElementById('alt');
+			var e = document.getElementById('path')
+			c.innerHTML += getAlt;
+			e.innerHTML += getSrc;
+			
+		}
+	</script>
+</body>
+</html>		
